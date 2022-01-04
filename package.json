@@ -1,0 +1,54 @@
+{
+  "name": "@sorion/windmill-vue",
+  "version": "0.1.0",
+  "description": "Vue 3 UI component library built with Tailwind CSS, inspired by @windmill/react-ui",
+  "files": [
+    "dist",
+    "src",
+    "README.md"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --declaration --emitDeclarationOnly && vite build",
+    "typecheck": "vue-tsc --noEmit"
+  },
+  "main": "./dist/windmill-vue.umd.js",
+  "module": "./dist/windmill-vue.es.js",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/windmill-vue.es.js",
+      "require": "./dist/windmill-vue.umd.js"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sorion/windmill-vue.git"
+  },
+  "keywords": [
+    "vue",
+    "windmill"
+  ],
+  "author": "Maxime Pelte",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Sorion/windmill-vue/issues"
+  },
+  "homepage": "https://github.com/Sorion/windmill-vue#readme",
+  "peerDependencies": {
+    "tailwindcss": ">=3.0.0",
+    "vue": ">=3.0.0"
+  },
+  "dependencies": {
+    "@tailwindcss/forms": "^0.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.7",
+    "@vitejs/plugin-vue": "^2.0.0",
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.4.5",
+    "typescript": "^4.4.4",
+    "vite": "^2.7.2",
+    "vue-tsc": "^0.29.8"
+  }
+}
