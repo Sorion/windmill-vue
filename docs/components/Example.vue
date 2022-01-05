@@ -33,8 +33,7 @@ export default defineComponent({
 
 <style lang="postcss" scoped>
 .example-container {
-  @apply flex flex-col mx-4 my-6;
-  min-height: 15rem;
+  @apply flex flex-col my-6;
 }
 
 .label-container {

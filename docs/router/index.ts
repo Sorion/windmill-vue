@@ -19,7 +19,19 @@ const routes: Array<RouteRecordRaw> = [
     path: '/',
     name: 'documentation',
     component: () => import('../views/Documentation.vue'),
-    children: [route('documentation', 'Description'), route('documentation/button', 'button/Button')],
+    children: [
+      route('documentation', 'Description'),
+      route('documentation/alert', 'alert/AlertDocumentation'),
+      route('documentation/avatar', 'avatar/AvatarDocumentation'),
+      route('documentation/backdrop', 'backdrop/BackdropDocumentation'),
+      route('documentation/badge', 'badge/BadgeDocumentation'),
+      route('documentation/button', 'button/ButtonDocumentation'),
+      route('documentation/card', 'card/CardDocumentation'),
+      route('documentation/dropdown', 'dropdown/DropdownDocumentation'),
+      route('documentation/helper-text', 'helper-text/HelperTextDocumentation'),
+      route('documentation/input', 'input/InputDocumentation'),
+      route('documentation/label', 'label/LabelDocumentation'),
+    ],
   },
 ];
 

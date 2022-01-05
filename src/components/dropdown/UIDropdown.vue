@@ -15,7 +15,7 @@ export default defineComponent({
   name: 'UIDropdown',
   props: {
     isOpen: { type: Boolean, required: true },
-    align: { type: String, required: false, default: 'left' }
+    align: { type: String, required: false, default: 'left' },
   },
   emits: ['close'],
   setup(props, context) {
@@ -23,7 +23,7 @@ export default defineComponent({
     const leftRightClass = computed(() => {
       return {
         'left-0': props.align === 'left',
-        'right-0': props.align === 'right'
+        'right-0': props.align === 'right',
       };
     });
 
@@ -56,15 +56,15 @@ export default defineComponent({
         }
       },
       {
-        flush: 'post'
+        flush: 'post',
       }
     );
 
     return {
       leftRightClass,
-      dropdownRef
+      dropdownRef,
     };
-  }
+  },
 });
 </script>
 
