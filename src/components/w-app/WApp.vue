@@ -9,7 +9,7 @@ export default defineComponent({
   name: 'WApp',
   props: {
     dark: { type: Boolean, default: false },
-    usePreferences: { type: Boolean, default: false }
+    usePreferences: { type: Boolean, default: false },
   },
   setup(props) {
     const setMode = (isDark: boolean) => {
@@ -28,7 +28,7 @@ export default defineComponent({
         setMode(value);
       }
     );
-  }
+  },
 });
 </script>
 
