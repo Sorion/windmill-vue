@@ -31,6 +31,12 @@ const routes: Array<RouteRecordRaw> = [
       route('documentation/helper-text', 'helper-text/HelperTextDocumentation'),
       route('documentation/input', 'input/InputDocumentation'),
       route('documentation/label', 'label/LabelDocumentation'),
+      route('documentation/modal', 'modal/ModalDocumentation'),
+      route('documentation/pagination', 'pagination/PaginationDocumentation'),
+      route('documentation/select', 'select/SelectDocumentation'),
+      route('documentation/table', 'table/TableDocumentation'),
+      route('documentation/textarea', 'textarea/TextareaDocumentation'),
+      route('documentation/w-app', 'windmill/WindmillDocumentation'),
     ],
   },
 ];
