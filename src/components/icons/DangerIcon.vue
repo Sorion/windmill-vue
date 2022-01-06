@@ -1,9 +1,9 @@
 <template>
   <svg
     fill="none"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    strokeWidth="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
     viewBox="0 0 24 24"
     stroke="currentColor"
   >
