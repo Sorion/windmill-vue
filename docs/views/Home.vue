@@ -17,7 +17,7 @@ export default defineComponent({
   setup() {
     const router = useRouter();
     const goToDoc = () => {
-      router.push({ name: 'documentation/button' });
+      router.push({ name: 'documentation/get-started' });
     };
 
     return {

@@ -34,6 +34,6 @@ export default defineComponent({
 }
 
 .documentation-view {
-  @apply px-2 py-9 lg:w-4/5;
+  @apply px-2 py-9 lg:w-4/5 md:w-2/3 sm:w-1/3;
 }
 </style>
