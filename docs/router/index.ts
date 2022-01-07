@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
 import Home from '../views/Home.vue';
+import NotFound from '../views/NotFound.vue';
 
 function route(path: string, component: string) {
   return {
@@ -39,11 +40,17 @@ const routes: Array<RouteRecordRaw> = [
       route('documentation/w-app', 'windmill/WindmillDocumentation'),
     ],
   },
+  { path: '/:pathMatch(.*)*', name: 'not-found', component: NotFound },
 ];
 
 const router = createRouter({
   history: createWebHistory(),
   routes,
 });
+
+router.resolve({
+  name: 'not-found',
+  params: { pathMatch: ['not', 'found'] },
+}).href; // '/not/found'
 
 export default router;
