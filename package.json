@@ -12,7 +12,7 @@
     "build": "vue-tsc --declaration --emitDeclarationOnly && vite build",
     "typecheck": "vue-tsc --noEmit",
     "docs:dev": "vite serve --config scripts/doc.config.ts",
-    "docs:build": "vite build --config scripts/doc.config.ts"
+    "docs:build": "vite build --config scripts/doc.config.ts && copyfiles --flat netlify.toml dist-docs"
   },
   "main": "./dist/windmill-vue.umd.js",
   "module": "./dist/windmill-vue.es.js",
@@ -55,6 +55,7 @@
     "@vue/eslint-config-prettier": "^6.0.0",
     "@vue/eslint-config-typescript": "^7.0.0",
     "autoprefixer": "^10.4.0",
+    "copyfiles": "^2.4.1",
     "eslint": "^7.20.0",
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-vue": "^7.2.0",
