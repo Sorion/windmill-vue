@@ -12,7 +12,8 @@
     "build": "vue-tsc --declaration --emitDeclarationOnly && vite build",
     "typecheck": "vue-tsc --noEmit",
     "docs:dev": "vite serve --config scripts/doc.config.ts",
-    "docs:build": "vite build --config scripts/doc.config.ts && copyfiles --flat netlify.toml dist-docs"
+    "docs:build": "vite build --config scripts/doc.config.ts && copyfiles --flat netlify.toml dist-docs",
+    "docs:preview": "vite preview --config scripts/doc.config.ts"
   },
   "main": "./dist/windmill-vue.umd.js",
   "module": "./dist/windmill-vue.es.js",
