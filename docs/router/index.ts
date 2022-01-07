@@ -3,10 +3,18 @@ import Home from '../views/Home.vue';
 import NotFound from '../views/NotFound.vue';
 
 function route(path: string, component: string) {
+  const splitName = component.split('/');
   return {
     path,
     name: path,
-    component: () => import(`../views/components/${component}.vue`),
+    component: () => {
+      if (splitName.length === 1) {
+        return import(`../views/components/${splitName[0]}.vue`);
+      }
+      if (splitName.length === 2) {
+        return import(`../views/components/${splitName[0]}/${splitName[1]}.vue`);
+      }
+    },
   };
 }
 

@@ -13,7 +13,7 @@
         </div>
       </button>
       <router-link class="link-base link-item active px-2" to="/">Home</router-link>
-      <router-link class="link-base link-item active px-2" to="/documentation">Documentation</router-link>
+      <router-link class="link-base link-item active px-2" to="/documentation/get-started">Documentation</router-link>
       <a class="link-base link-item active px-2" href="https://github.com/Sorion/windmill-vue" aria-label="Github"
         ><div aria-hidden="true"><GithubIcon class="h-5 w-5" /></div>
       </a>
