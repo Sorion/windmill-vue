@@ -1,7 +1,7 @@
 <template>
   <div>
     <Example :code="code">
-      <UIAvatar src="/docs/assets/img/avatar-1.jpg" alt="Judith" />
+      <UIAvatar src="/img/avatar-1.jpg" alt="Judith" />
     </Example>
   </div>
 </template>

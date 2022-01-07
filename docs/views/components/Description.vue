@@ -37,7 +37,7 @@
       <UICard class="max-w-md">
         <UICardBody>
           <div class="flex">
-            <UIAvatar size="large" src="/docs/assets/img/avatar-1.jpg" alt="Judith" />
+            <UIAvatar size="large" src="/img/avatar-1.jpg" alt="Judith" />
             <div class="ml-2">
               <p class="font-semibold dark:text-gray-300">Judith Ipsum</p>
               <p class="text-xs text-gray-500">@judithipsum</p>

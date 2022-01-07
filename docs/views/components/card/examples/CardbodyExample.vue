@@ -2,7 +2,7 @@
   <div>
     <Example :code="code">
       <UICard class="flex h-48">
-        <img class="object-cover w-1/3" src="/docs/assets/img/forest.jpeg" />
+        <img class="object-cover w-1/3" src="/img/forest.jpeg" />
         <UICardBody>
           <p class="mb-4 font-semibold text-gray-600 dark:text-gray-300">Revenue</p>
           <p class="text-gray-600 dark:text-gray-400">

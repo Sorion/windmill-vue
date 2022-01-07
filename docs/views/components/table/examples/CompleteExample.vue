@@ -14,7 +14,7 @@
             <UITableRow>
               <UITableCell>
                 <div class="flex items-center text-sm">
-                  <UIAvatar src="/docs/assets/img/avatar-1.jpg" alt="Judith" />
+                  <UIAvatar src="/img/avatar-1.jpg" alt="Judith" />
                   <span class="font-semibold ml-2">Judith Ipsum</span>
                 </div>
               </UITableCell>
