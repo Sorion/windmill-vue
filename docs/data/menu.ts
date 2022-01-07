@@ -5,7 +5,7 @@ export default {
       pages: [
         {
           title: 'Get started',
-          link: 'documentation/get-started',
+          link: '/documentation/get-started',
         },
         {
           title: 'Dark mode',

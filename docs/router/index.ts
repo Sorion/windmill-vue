@@ -20,7 +20,7 @@ const routes: Array<RouteRecordRaw> = [
     name: 'documentation',
     component: () => import('../views/Documentation.vue'),
     children: [
-      route('documentation', 'Description'),
+      route('documentation/get-started', 'Description'),
       route('documentation/alert', 'alert/AlertDocumentation'),
       route('documentation/avatar', 'avatar/AvatarDocumentation'),
       route('documentation/backdrop', 'backdrop/BackdropDocumentation'),
