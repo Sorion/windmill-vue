@@ -2,7 +2,7 @@
   <button :class="className" :disabled="disabled">
     <component :is="iconOnLeft" v-if="iconOnLeft !== null" :class="{ ...iconClassName, 'icon-left': hasSlot }" />
     <slot></slot>
-    <component :is="rightIcon" v-if="rightIcon !== null" :class="{ ...iconClassName, 'icon-right': hasSlot }" />
+    <component :is="iconRight" v-if="iconRight !== null" :class="{ ...iconClassName, 'icon-right': hasSlot }" />
   </button>
 </template>
 
@@ -17,8 +17,8 @@ export default defineComponent({
     disabled: { type: Boolean, default: false },
     block: { type: Boolean },
     icon: { type: Object, required: false, default: null },
-    leftIcon: { type: Object, required: false, default: null },
-    rightIcon: { type: Object, required: false, default: null }
+    iconLeft: { type: Object, required: false, default: null },
+    iconRight: { type: Object, required: false, default: null },
   },
   setup(props, context) {
     const hasSlot = computed(() => {
@@ -42,7 +42,7 @@ export default defineComponent({
         small: props.size === 'small',
         pagination: props.size === 'pagination',
         icon: !hasSlot.value,
-        block: props.block
+        block: props.block,
       };
     });
 
@@ -51,20 +51,20 @@ export default defineComponent({
         'icon-larger': props.size === 'larger',
         'icon-large': props.size === 'large',
         'icon-regular': props.size === 'regular',
-        'icon-small': props.size === 'small'
+        'icon-small': props.size === 'small',
       };
     });
 
     const iconOnLeft = computed(() => {
-      return props.leftIcon || props.icon;
+      return props.iconLeft || props.icon;
     });
     return {
       className,
       iconClassName,
       iconOnLeft,
-      hasSlot
+      hasSlot,
     };
-  }
+  },
 });
 </script>
 

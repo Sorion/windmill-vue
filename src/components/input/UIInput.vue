@@ -11,7 +11,7 @@ export default defineComponent({
     modelValue: { type: [String, Number, Boolean, Array], required: true },
     valid: { type: Boolean, default: null },
     disabled: { type: Boolean, default: false },
-    type: { type: String, default: 'text' }
+    type: { type: String, default: 'text' },
   },
   emits: ['update:modelValue'],
   setup(props, context) {
@@ -25,25 +25,26 @@ export default defineComponent({
       },
       set: (value) => {
         context.emit('update:modelValue', value);
-      }
+      },
     });
 
     const baseClassName = computed(() => {
       return {
         'radio-style': props.type === 'radio',
         'checkbox-style': props.type === 'checkbox',
-        'input-base': props.type === 'text' || props.type === 'email' || props.type === 'password',
+        'input-base':
+          props.type === 'text' || props.type === 'email' || props.type === 'password' || props.type === 'number',
         active: !hasValid() && !props.disabled,
         disabled: !hasValid() && props.disabled,
         valid: hasValid() && props.valid === true,
-        invalid: hasValid() && props.valid === false
+        invalid: hasValid() && props.valid === false,
       };
     });
     return {
       baseClassName,
-      update
+      update,
     };
-  }
+  },
 });
 </script>
 

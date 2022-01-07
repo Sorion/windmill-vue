@@ -12,21 +12,21 @@ export default defineComponent({
   props: {
     check: { type: Boolean, default: false },
     radio: { type: Boolean, default: false },
-    disabled: { type: Boolean, default: false }
+    disabled: { type: Boolean, default: false },
   },
   setup(props) {
     const className = computed(() => {
       return {
         'label-base': true,
         check: props.check || props.radio,
-        disabled: props.disabled
+        disabled: props.disabled,
       };
     });
 
     return {
-      className
+      className,
     };
-  }
+  },
 });
 </script>
 
