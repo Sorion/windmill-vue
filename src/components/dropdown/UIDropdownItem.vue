@@ -9,15 +9,10 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 
-import UIButton from '../button';
-
 export default defineComponent({
   name: 'UIDropdownItem',
-  components: {
-    UIButton
-  },
   props: {
-    className: { type: String, required: false, default: '' }
-  }
+    className: { type: String, required: false, default: '' },
+  },
 });
 </script>

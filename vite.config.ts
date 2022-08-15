@@ -8,10 +8,10 @@ export default defineConfig({
   build: {
     lib: {
       entry: resolve(__dirname, 'src/index.ts'),
-      name: 'windmill-vue'
+      name: 'windmill-vue',
     },
     rollupOptions: {
-      external: ['vue'],
+      external: ['vue', 'tailwindcss'],
       output: {
         assetFileNames: (asset) => {
           if (asset.name === 'style.css') {
@@ -20,9 +20,9 @@ export default defineConfig({
           return asset.name || '';
         },
         globals: {
-          vue: 'Vue'
-        }
-      }
-    }
-  }
+          vue: 'Vue',
+        },
+      },
+    },
+  },
 });
