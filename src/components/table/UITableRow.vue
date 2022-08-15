@@ -11,8 +11,3 @@ export default defineComponent({
   name: 'UITableRow',
 });
 </script>
-
-<style lang="postcss" scoped>
-.table-row {
-}
-</style>

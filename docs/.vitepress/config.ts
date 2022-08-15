@@ -45,6 +45,7 @@ export default defineConfig({
   description: 'Vue 3 components library made with tailwind, inspired by Windmill React UI',
   scrollOffset: 'header',
   themeConfig: {
+    logo: '/logo.png',
     nav,
     sidebar,
     socialLinks: [

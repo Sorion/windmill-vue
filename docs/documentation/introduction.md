@@ -11,7 +11,9 @@ Windmill Vue UI is a component library based on Tailwind CSS, that goes beyond u
 You can click the "moon" icon to preview the dark theme on example
 :::
 
-<IntroductionVue />
+<LivePreview>
+  <IntroductionVue />
+</LivePreview>
 
 ## Composable
 

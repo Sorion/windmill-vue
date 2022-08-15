@@ -54,7 +54,9 @@ I think you'll understand better the following sections with a complete, context
 </UITableContainer>
 ```
 
-<CompleteExample />
+<LivePreview>
+  <CompleteExample />
+</LivePreview>
 
 ## Table Container
 
@@ -64,7 +66,9 @@ The `UITableContainer` is responsible for containing the entire table inside bor
 <UITableContainer>Table content goes here</UITableContainer>
 ```
 
-<TableContainerExample />
+<LivePreview>
+  <TableContainerExample />
+</LivePreview>
 
 ## Table element
 
@@ -76,7 +80,9 @@ The `UITable` is exaclty the table element, just the necessary for it to work we
 </UITableContainer>
 ```
 
-<TableExample />
+<LivePreview>
+  <TableExample />
+</LivePreview>
 
 ## Table Header
 
@@ -95,7 +101,9 @@ The `UITableHeader` is the `thead` element with specific styles added to create 
 </UITableContainer>
 ```
 
-<TableHeaderExample />
+<LivePreview>
+  <TableHeaderExample />
+</LivePreview>
 
 ## Table Body
 
@@ -114,7 +122,9 @@ The `UITableBody` is the `tbody` element with specific styles added to create un
 </UITableContainer>
 ```
 
-<TableBodyExample />
+<LivePreview>
+  <TableBodyExample />
+</LivePreview>
 
 ## Table Row
 
@@ -137,7 +147,9 @@ The `UITableRow` maps to the `tr` element and just apply minimum text styles. Th
 </UITableContainer>
 ```
 
-<TableRowExample />
+<LivePreview>
+  <TableRowExample />
+</LivePreview>
 
 ## Table Cell
 
@@ -156,7 +168,9 @@ The `UITableCell` is responsible for the `td` element and also just apply bare m
 </UITableContainer>
 ```
 
-<TableCellExample />
+<LivePreview>
+  <TableCellExample />
+</LivePreview>
 
 ## Table Footer
 
@@ -175,4 +189,6 @@ Read [Pagination](../pagination/) docs for more.
 </UITableContainer>
 ```
 
-<TableFooterExample />
+<LivePreview>
+  <TableFooterExample />
+</LivePreview>

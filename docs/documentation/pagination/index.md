@@ -18,7 +18,9 @@ The base `UIPagination` component needs four required props: `totalResults`, `re
 <UIPagination :total-results="120" :results-per-page="10" :on-change="() => {}" label="Page navigation" />
 ```
 
-<BaseExample />
+<LivePreview>
+  <BaseExample />
+</LivePreview>
 
 ## Total results
 
