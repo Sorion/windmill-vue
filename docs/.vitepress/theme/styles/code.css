@@ -1,0 +1,8 @@
+.live-v> :not(:only-child) {
+  @apply mb-4;
+}
+
+.live-h> :not(:only-child) {
+  @apply mr-4;
+}
+
