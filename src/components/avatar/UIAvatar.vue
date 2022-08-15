@@ -13,21 +13,21 @@ export default defineComponent({
   props: {
     size: { type: String, default: 'regular' },
     src: { type: String, required: true },
-    alt: { type: String, required: true }
+    alt: { type: String, required: true },
   },
   setup(props) {
     const classSize = computed(() => {
       return {
         large: props.size === 'large',
         regular: props.size === 'regular',
-        small: props.size === 'small'
+        small: props.size === 'small',
       };
     });
 
     return {
-      classSize
+      classSize,
     };
-  }
+  },
 });
 </script>
 

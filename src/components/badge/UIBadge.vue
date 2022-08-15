@@ -15,14 +15,14 @@ export default defineComponent({
         neutral: props.type === 'neutral',
         success: props.type === 'success',
         danger: props.type === 'danger',
-        warning: props.type === 'warning'
+        warning: props.type === 'warning',
       };
     });
 
     return {
-      className
+      className,
     };
-  }
+  },
 });
 </script>
 

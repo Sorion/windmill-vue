@@ -8,8 +8,8 @@ import { defineComponent } from 'vue';
 export default defineComponent({
   name: 'UICard',
   props: {
-    colored: { type: Boolean, default: false }
-  }
+    colored: { type: Boolean, default: false },
+  },
 });
 </script>
 

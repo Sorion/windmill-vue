@@ -1,9 +1,11 @@
-import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import { resolve } from 'path';
 
-// https://vitejs.dev/config/
-export default defineConfig({
+/**
+ * @type {import('vite').UserConfig}
+ * @see https://vitejs.dev/config/
+ */
+const config = {
   plugins: [vue()],
   build: {
     lib: {
@@ -25,4 +27,6 @@ export default defineConfig({
       },
     },
   },
-});
+};
+
+export default config;
