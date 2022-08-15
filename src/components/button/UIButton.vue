@@ -1,9 +1,9 @@
 <template>
-  <button :class="className" :disabled="disabled">
+  <component :is="tag" :class="className" :disabled="disabled">
     <component :is="iconOnLeft" v-if="iconOnLeft !== null" :class="{ ...iconClassName, 'icon-left': hasSlot }" />
     <slot></slot>
     <component :is="iconRight" v-if="iconRight !== null" :class="{ ...iconClassName, 'icon-right': hasSlot }" />
-  </button>
+  </component>
 </template>
 
 <script lang="ts">
@@ -16,9 +16,10 @@ export default defineComponent({
     size: { type: String, default: 'regular' },
     disabled: { type: Boolean, default: false },
     block: { type: Boolean },
-    icon: { type: Object, required: false, default: null },
-    iconLeft: { type: Object, required: false, default: null },
-    iconRight: { type: Object, required: false, default: null },
+    tag: { type: String, default: 'button' },
+    icon: { type: [Function, String], required: false, default: null },
+    iconLeft: { type: [Function, String], required: false, default: null },
+    iconRight: { type: [Function, String], required: false, default: null },
   },
   setup(props, context) {
     const hasSlot = computed(() => {
@@ -86,7 +87,7 @@ export default defineComponent({
 }
 
 .button-base.primary {
-  @apply text-white bg-purple-600 border border-transparent;
+  @apply text-white bg-purple-600 border border-solid border-transparent;
 }
 
 .primary.active {
@@ -94,11 +95,11 @@ export default defineComponent({
 }
 
 .button-base.outline-style {
-  @apply text-gray-600 border-gray-300 border dark:text-gray-400 focus:outline-none;
+  @apply text-gray-600 border-gray-300 border border-solid dark:text-gray-400 focus:outline-none;
 }
 
 .outline-style.active {
-  @apply active:bg-transparent hover:border-gray-500 focus:border-gray-500 active:text-gray-500  focus:ring focus:ring-gray-300;
+  @apply active:bg-transparent hover:border-gray-500 focus:border-gray-500 active:text-gray-500 focus:ring focus:ring-gray-300;
 }
 
 .outline-style.disabled {

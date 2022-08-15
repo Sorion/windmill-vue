@@ -1,17 +1,19 @@
-import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import { resolve } from 'path';
 
-// https://vitejs.dev/config/
-export default defineConfig({
+/**
+ * @type {import('vite').UserConfig}
+ * @see https://vitejs.dev/config/
+ */
+const config = {
   plugins: [vue()],
   build: {
     lib: {
       entry: resolve(__dirname, 'src/index.ts'),
-      name: 'windmill-vue'
+      name: 'windmill-vue',
     },
     rollupOptions: {
-      external: ['vue'],
+      external: ['vue', 'tailwindcss'],
       output: {
         assetFileNames: (asset) => {
           if (asset.name === 'style.css') {
@@ -20,9 +22,11 @@ export default defineConfig({
           return asset.name || '';
         },
         globals: {
-          vue: 'Vue'
-        }
-      }
-    }
-  }
-});
+          vue: 'Vue',
+        },
+      },
+    },
+  },
+};
+
+export default config;

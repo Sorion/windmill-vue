@@ -4,16 +4,15 @@
   "description": "Vue 3 UI component library built with Tailwind CSS, inspired by @windmill/react-ui",
   "files": [
     "dist",
-    "src",
     "README.md"
   ],
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --declaration --emitDeclarationOnly && vite build",
     "typecheck": "vue-tsc --noEmit",
-    "docs:dev": "vite serve --config scripts/doc.config.ts",
-    "docs:build": "vite build --config scripts/doc.config.ts && copyfiles --flat netlify.toml dist-docs",
-    "docs:preview": "vite preview --config scripts/doc.config.ts"
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs && copyfiles --flat netlify.toml docs/.vitepress/dist",
+    "docs:preview": "vitepress preview docs"
   },
   "main": "./dist/windmill-vue.umd.js",
   "module": "./dist/windmill-vue.es.js",
@@ -39,34 +38,31 @@
   },
   "homepage": "https://github.com/Sorion/windmill-vue#readme",
   "peerDependencies": {
-    "tailwindcss": ">=3.0.0",
+    "tailwindcss": "^3.1.8",
     "vue": ">=3.0.0"
   },
   "dependencies": {
-    "@tailwindcss/forms": "^0.4.0"
+    "@tailwindcss/forms": "^0.5.2",
+    "focus-lock": "^0.11.2"
   },
   "devDependencies": {
-    "@heroicons/vue": "^1.0.5",
-    "@types/node": "^17.0.7",
-    "@types/prismjs": "^1.16.6",
-    "@types/webpack-env": "^1.16.3",
-    "@typescript-eslint/eslint-plugin": "^4.15.1",
-    "@typescript-eslint/parser": "^4.15.1",
-    "@vitejs/plugin-vue": "^2.0.0",
-    "@vue/eslint-config-prettier": "^6.0.0",
-    "@vue/eslint-config-typescript": "^7.0.0",
-    "autoprefixer": "^10.4.0",
+    "@heroicons/vue": "^1.0.6",
+    "@types/node": "^18.7.3",
+    "@typescript-eslint/eslint-plugin": "^5.33.0",
+    "@typescript-eslint/parser": "^5.33.0",
+    "@vitejs/plugin-vue": "^3.0.3",
+    "@vue/eslint-config-prettier": "^7.0.0",
+    "@vue/eslint-config-typescript": "^11.0.0",
+    "autoprefixer": "^10.4.8",
     "copyfiles": "^2.4.1",
-    "eslint": "^7.20.0",
-    "eslint-plugin-prettier": "^3.3.1",
-    "eslint-plugin-vue": "^7.2.0",
-    "pinia": "^2.0.9",
-    "postcss": "^8.4.5",
-    "prettier": "^2.2.1",
-    "prismjs": "^1.25.0",
-    "typescript": "^4.4.4",
-    "vite": "^2.7.2",
-    "vue-router": "^4.0.3",
-    "vue-tsc": "^0.29.8"
+    "eslint": "^8.21.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-vue": "^9.3.0",
+    "postcss": "^8.4.16",
+    "prettier": "^2.7.1",
+    "typescript": "^4.7.4",
+    "vite": "^3.0.7",
+    "vitepress": "^1.0.0-alpha.4",
+    "vue-tsc": "^0.40.1"
   }
 }

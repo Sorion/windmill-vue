@@ -8,7 +8,7 @@ import { computed, defineComponent } from 'vue';
 export default defineComponent({
   name: 'UIHelperText',
   props: {
-    valid: { type: Boolean, required: false, default: undefined }
+    valid: { type: Boolean, required: false, default: undefined },
   },
   setup(props) {
     const className = computed(() => {
@@ -18,14 +18,14 @@ export default defineComponent({
 
       return {
         valid: props.valid,
-        invalid: !props.valid && props.valid !== undefined
+        invalid: !props.valid && props.valid !== undefined,
       };
     });
 
     return {
-      className
+      className,
     };
-  }
+  },
 });
 </script>
 

@@ -12,9 +12,7 @@ const windmillVue = {
 
       app.component(component.name, component);
     }
-  }
+  },
 };
 
 export default windmillVue;
-
-export * from './components';

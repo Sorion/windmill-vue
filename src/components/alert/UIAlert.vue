@@ -23,21 +23,21 @@ export default defineComponent({
   props: {
     type: { type: String, default: 'neutral' },
     // eslint-disable-next-line vue/require-default-prop
-    onClose: { type: Function, required: false }
+    onClose: { type: Function, required: false },
   },
   setup(props) {
     const handleClose = () => {
-      if(props.onClose) {
-        props.onClose()
+      if (props.onClose) {
+        props.onClose();
       }
-    }
+    };
     const className = computed(() => {
       return {
         neutral: props.type === 'neutral',
         success: props.type === 'success',
         danger: props.type === 'danger',
         warning: props.type === 'warning',
-        info: props.type === 'info'
+        info: props.type === 'info',
       };
     });
 
@@ -69,9 +69,9 @@ export default defineComponent({
     return {
       className,
       iconComponent,
-      handleClose
+      handleClose,
     };
-  }
+  },
 });
 </script>
 

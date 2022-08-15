@@ -5,7 +5,7 @@
 import { defineComponent } from 'vue';
 
 export default defineComponent({
-  name: 'UITableCell'
+  name: 'UITableCell',
 });
 </script>
 

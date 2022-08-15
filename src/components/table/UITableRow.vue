@@ -8,11 +8,6 @@
 import { defineComponent } from 'vue';
 
 export default defineComponent({
-  name: 'UITableRow'
+  name: 'UITableRow',
 });
 </script>
-
-<style lang="postcss" scoped>
-.table-row {
-}
-</style>

@@ -49,13 +49,13 @@ export default defineComponent({
   components: {
     UINavigationButton,
     UIPageButton,
-    UIEmptyButton
+    UIEmptyButton,
   },
   props: {
     totalResults: { type: Number, required: true },
     resultsPerPage: { type: Number, required: true },
     onChange: { type: Function, required: true },
-    label: { type: String, required: true }
+    label: { type: String, required: true },
   },
   setup(props) {
     const FIRST_PAGE = 1;
@@ -91,7 +91,7 @@ export default defineComponent({
           TOTAL_PAGES.value - 3,
           TOTAL_PAGES.value - 2,
           TOTAL_PAGES.value - 1,
-          TOTAL_PAGES.value
+          TOTAL_PAGES.value,
         ];
       }
 
@@ -99,17 +99,16 @@ export default defineComponent({
     });
 
     const setActivePage = (page: number | string) => {
-      if(page.constructor instanceof String) {
-        return 
+      if (page.constructor instanceof String) {
+        return;
       } else {
         const numberValue = page as number;
-        activePage.value = numberValue
+        activePage.value = numberValue;
       }
-      
     };
 
     onUpdated(() => {
-      props.onChange(activePage.value);
+      if (props.onChange) props.onChange(activePage.value);
     });
 
     return {
@@ -119,9 +118,9 @@ export default defineComponent({
       activePage,
       pages,
       FIRST_PAGE,
-      LAST_PAGE
+      LAST_PAGE,
     };
-  }
+  },
 });
 </script>
 
@@ -139,6 +138,6 @@ export default defineComponent({
 }
 
 .navigation-list {
-  @apply inline-flex items-center;
+  @apply inline-flex items-center list-none;
 }
 </style>

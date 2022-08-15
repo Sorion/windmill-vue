@@ -9,7 +9,7 @@ export default defineComponent({
   name: 'UIPageButton',
   props: {
     page: { type: [String, Number], required: true },
-    isActive: { type: Boolean, required: true }
-  }
+    isActive: { type: Boolean, required: true },
+  },
 });
 </script>
